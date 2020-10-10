@@ -82,9 +82,8 @@ void KP::processLine(std::vector<constants::entry>  &entries,std::string &myStri
 	/*Keep track of how many times each token seen*/
 void KP::processToken(std::vector<constants::entry>  &entries,std::string &token)
 {
-    string line = token;
-
     strip_unwanted_chars(token);
+    string line = token;
     toUpper(line);
 
     for (unsigned int i = 0; i < entries.size(); i++)

@@ -24,7 +24,7 @@ void closeFile(std::fstream & myfile)
 int writetoFile(std::vector<constants::entry>  & entries, const std::string & outputfilename)
 {
     fstream writefile;
-    openFile(writeFile, outputfilename, std::ios_base::out)
+    openFile(writefile, outputfilename, std::ios_base::out);
 
     if (!writefile.is_open())
     {
@@ -38,7 +38,7 @@ int writetoFile(std::vector<constants::entry>  & entries, const std::string & ou
 
     for (unsigned int i = 0; i < entries.size(); i++)
     {
-        writefile << entries[i].word<< " " << entries[i].number_occurences << endl;
+        writeFile << entries[i].word<< " " << entries[i].number_occurences << endl;
     }
 
     closeFile(writefile);
