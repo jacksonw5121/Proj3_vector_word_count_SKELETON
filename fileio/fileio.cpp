@@ -38,7 +38,7 @@ int writetoFile(std::vector<constants::entry>  & entries, const std::string & ou
 
     for (unsigned int i = 0; i < entries.size(); i++)
     {
-        writeFile << entries[i].word<< " " << entries[i].number_occurences << endl;
+        writefile << entries[i].word<< " " << entries[i].number_occurences << endl;
     }
 
     closeFile(writefile);
